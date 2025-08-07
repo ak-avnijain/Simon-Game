@@ -82,3 +82,29 @@ function startOver() {
   gamePattern = [];
   started = false;
 }
+
+$(document).keypress(function () {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
+
+$("#start-button").click(function () {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
+
+let gameStarted = false;
+
+$("#start-btn").click(function () {
+  if (!gameStarted) {
+    $("#level-title").text("Level 0");
+    nextSequence();
+    gameStarted = true;
+  }
+});
